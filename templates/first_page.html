@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+	<script>
+$(document).ready(function() {
+
+  $("#save").click(function() {
+
+    var name = $("#name").val();
+      
+      $.ajax({
+        url: '/name',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ "name": name }),
+        dataType: 'json'
+      });
+    
+
+ 
+  });
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+</head>
+<style type="text/css">
+  body{
+    background: url(https://images.unsplash.com/photo-1539628399213-d6aa89c93074?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+    background-position: right;
+  }
+  label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 20px;
+}
+.form-inline .form-group {
+    display: block;
+    }
+    .form1bg{
+
+    background: #1a1b1b3d;
+    margin: 10% 50px;
+    padding: 4% 10px;
+  }
+  h2{
+    
+    font-family: cursive;
+    color: white;
+    font-size: 31px;
+    text-align: center;
+
+  }
+.btn-default {
+    font-size: 17px;
+    color: #000;
+    background-color: #fc7f0c;
+    width: 100%;
+    height: 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+</style>
+<body>
+
+  <div class="form1bg">
+      <div class="container">
+        <h2>Enter name to view your score</h2>
+        <div class="row">
+          <form class="form-inline" method="POST">
+              <div class="col-sm-12 col-lg-2 col-md-2">
+              </div>
+              <div class="col-sm-12 col-lg-6 col-md-6">
+                <div class="form-group">
+                <input type="type" class="form-control" id="name" placeholder="Enter Name" style=" width: 100%; height: 45px;">
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-2 col-md-2">
+                <input type="submit" id = "save" class="btn btn-default">
+              </div>
+              <div class="col-sm-12 col-lg-2 col-md-2">
+              </div>
+          </form>
+        </div>        
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<html><head>
+  <title>Stock View Screen</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+<style type="text/css">
+  body{
+    background: url(https://images.unsplash.com/photo-1588591795084-1770cb3be374?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+    background-position: right;
+  }
+  label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 20px;
+}
+.form-inline .form-group {
+    display: block;
+    }
+.form1bg {
+    background: #fffffabd;
+    margin: 10% 50px;
+    padding: 4% 10px;
+}
+  h2{
+    
+    font-family: cursive;
+    color: white;
+    font-size: 31px;
+    text-align: center;
+
+  }
+.btn-default {
+    font-size: 17px;
+    color: #000;
+    background-color: #fc7f0c;
+    width: 100%;
+    height: 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.option_hover:hover{
+  background-color: #e8b466a3;
+  
+}
+
+
+a {
+    border: 2px solid black;
+    padding: 11px;
+    display: block;
+    color: white;
+    margin: 30px 0px;
+    text-align: center;
+}
+span {font-weight: bold;color: #d20202;}
+
+</style></head>
+
+<body>
+
+  <div class="form1bg">
+      <div class="container">
+        <p style="font-size: initial;"></p>
+        <div class="row">
+              <div class="col-sm-12 col-lg-12 col-md-12">
+            
+              </div>
+
+              <div class="col-sm-12 col-lg-12 col-md-12">
+                
+              </div>
+
+              <div class="col-sm-12 col-lg-12 col-md-12" >
+                <h2><div style="color: black;">{{ i. question }}</div></h2>
+              </div>
+             
+              <div class="col-sm-12 col-lg-12 col-md-12">
+                <div class="question">
+                  <div class="col-sm-4 col-lg-4 col-md-4">
+                    <a class = "option_hover" href="{{ 'post/%d' %0 }}" id="0" style="color: black; font-style: italic; font-size: 20; border: none;">{{ i.option1 }}</a>
+                  </div>
+
+                  <div class="col-sm-4 col-lg-4 col-md-4">
+                    <a class = "option_hover" href="{{ 'post/%d' %10 }}" id="10" style="color: black; font-style: italic; font-size: 20; border: none;">{{ i.option2 }}</a>
+                  </div>
+
+                  <div class="col-sm-4 col-lg-4 col-md-4">
+                    <a class = "option_hover" href="{{ 'post/%d' %20 }}" id="20" style="color: black; font-style: italic; font-size: 20; border: none;">{{ i.option3 }}</a>
+                  </div>
+
+                </div>
+              </div>
+    
+              <div class="col-sm-12 col-lg-2 col-md-2">
+              </div>
+          
+        </div>        
+      </div>
+  </div>
+
+</body></html>
